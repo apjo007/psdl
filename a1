@@ -1,0 +1,9 @@
+#include <xc.h>
+
+void main(void) {
+    int a=1,b=2, sum;
+    sum = a+b;
+    TRISB=0;
+    PORTB=sum;
+    return;
+}
