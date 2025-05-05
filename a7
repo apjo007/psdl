@@ -1,6 +1,6 @@
 #include <xc.h> //Include Controller specific .h
 //Configuration bits setting
-#pragma config OSC = HS //Oscillator Selection
+#pragma config FOSC = HS //Oscillator Selection
 #pragma config WDT = OFF //Disable Watchdog timer
 #pragma config LVP = OFF //Disable Low Voltage Programming
 #pragma config PBADEN = OFF //Disable PORTB Analog inputs
