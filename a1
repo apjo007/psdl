@@ -1,0 +1,33 @@
+/*
+ * File:   ass6.c
+ * Author: Dell
+ *
+ * Created on 5 May, 2025, 4:13 AM
+ */
+
+
+#include <xc.h>
+#pragma config FOSC = HS
+#pragma config LVP = OFF
+#pragma config PBADEN = OFF
+#pragma config WDT = OFF
+void msdelay(int time);
+void main(void) {
+    INTCON2bits.RBPU =0;
+    ADCON1 =0x0F;
+    TRISD = 0x00;
+    while(1)
+    {
+        PORTD = 0xFF;
+        msdelay(250);
+        PORTD = 0x00;
+        msdelay(250);
+    }
+}
+void msdelay(int time){
+ int i,j;
+ for(i =0;i<time;i++)
+     for(j=0;j<710;j++);
+}
+    
+
